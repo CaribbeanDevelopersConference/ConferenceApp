@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<rxui:ReactiveTabbedPage
+    x:TypeArguments="conference:BottomNavigationViewModel"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:conference="clr-namespace:ConferenceApp;assembly=ConferenceApp"
+             xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
+             mc:Ignorable="d"
+             x:Class="ConferenceApp.BottomNavigation">
+
+</rxui:ReactiveTabbedPage>

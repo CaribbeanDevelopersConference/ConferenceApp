@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<rsg:ContentPageBase
+    x:TypeArguments="conference:SpeakerProfileViewModel" xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:rsg="clr-namespace:Rocket.Surgery.ReactiveUI.Forms;assembly=Rocket.Surgery.ReactiveUI.Forms"
+    xmlns:conference="clr-namespace:ConferenceApp;assembly=ConferenceApp"
+    x:Class="ConferenceApp.SpeakerProfile">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Speaker"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</rsg:ContentPageBase>
