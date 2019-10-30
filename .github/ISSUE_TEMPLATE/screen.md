@@ -14,3 +14,4 @@ assignees: ''
 - [ ] Build Item Template UI
 - [ ] Setup Bindings
 - [ ] Setup Services
+- [ ] Unit Tests
