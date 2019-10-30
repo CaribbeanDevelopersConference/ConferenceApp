@@ -2,7 +2,7 @@
 name: Screen
 about: Adds a new scren to the application
 title: 'screen:'
-labels: ''
+labels: screen
 assignees: ''
 
 ---
