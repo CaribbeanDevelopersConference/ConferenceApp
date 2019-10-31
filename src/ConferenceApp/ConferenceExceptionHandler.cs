@@ -14,7 +14,7 @@ namespace ConferenceApp
                 Debugger.Break();
             }
 
-            RxApp.MainThreadScheduler.Schedule(() => { throw ex; });
+            RxApp.MainThreadScheduler.Schedule(() => throw ex);
         }
 
         public void OnError(Exception ex)
@@ -23,14 +23,14 @@ namespace ConferenceApp
             {
                 Debugger.Break();
             }
-            RxApp.MainThreadScheduler.Schedule(() => { throw ex; });
+            RxApp.MainThreadScheduler.Schedule(() => throw ex);
         }
 
         public void OnCompleted()
         {
             if (Debugger.IsAttached)
                 Debugger.Break();
-            RxApp.MainThreadScheduler.Schedule(() => { throw new NotImplementedException(); });
+            RxApp.MainThreadScheduler.Schedule(() => throw new NotImplementedException());
         }
     }
 }

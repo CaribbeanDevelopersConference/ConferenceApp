@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace ConferenceApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Schedule : ContentPageBase<ScheduleViewModel>
+    public partial class Schedule : DataPageBase<ScheduleViewModel>
     {
         public Schedule()
         {

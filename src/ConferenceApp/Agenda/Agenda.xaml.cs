@@ -10,11 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace ConferenceApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Agenda : ContentPageBase<AgendaViewModel>
+    public partial class Agenda : DataPageBase<AgendaViewModel>
     {
         public Agenda()
         {
             InitializeComponent();
+        }
+
+        protected override void RegisterObservers()
+        {
+            base.RegisterObservers();
         }
     }
 }

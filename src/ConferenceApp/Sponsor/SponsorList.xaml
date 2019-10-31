@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<rsg:ContentPageBase
+<conference:DataPageBase
     x:TypeArguments="conference:SponsorListViewModel" xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:rsg="clr-namespace:Rocket.Surgery.ReactiveUI.Forms;assembly=Rocket.Surgery.ReactiveUI.Forms"
@@ -17,4 +17,4 @@
             </rsg:ReactiveListView>
         </StackLayout>
     </ContentPage.Content>
-</rsg:ContentPageBase>
+</conference:DataPageBase>
