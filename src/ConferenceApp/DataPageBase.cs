@@ -6,10 +6,11 @@ using System.Text;
 using ReactiveUI;
 using Rocket.Surgery.ReactiveUI;
 using Rocket.Surgery.ReactiveUI.Forms;
+using Splat;
 
 namespace ConferenceApp
 {
-    public abstract class DataPageBase<T> : ContentPageBase<T>
+    public abstract class DataPageBase<T> : ContentPageBase<T>, IEnableLogger
         where T : NavigationViewModelBase
     {
         protected override void RegisterObservers()

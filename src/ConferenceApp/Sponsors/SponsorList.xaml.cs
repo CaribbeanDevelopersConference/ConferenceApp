@@ -15,7 +15,7 @@ using Xamarin.Forms.Xaml;
 namespace ConferenceApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SponsorList : DataPageBase<SponsorListViewModel>, IEnableLogger
+    public partial class SponsorList : DataPageBase<SponsorListViewModel>
     {
         public SponsorList()
         {

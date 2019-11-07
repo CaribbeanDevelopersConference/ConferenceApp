@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using ReactiveUI;
+using Rocket.Surgery.ReactiveUI.Forms;
 using Serilog;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -10,35 +11,13 @@ using Splat.Serilog;
 
 namespace ConferenceApp
 {
-    public partial class App : Application
+    public partial class App : ApplicationBase
     {
 
         public App()
+            : base()
         {
             InitializeComponent();
-
-            RxApp.DefaultExceptionHandler = new ConferenceExceptionHandler();
-
-            Sextant.Sextant.Instance.InitializeForms();
-
-            // TODO: Abstract application composition
-            Locator
-                .CurrentMutable
-                .UseSerilogFullLogger(
-                    new LoggerConfiguration()
-                        .WriteTo
-                        .AppCenterCrashes()
-                        .CreateLogger());
-
-            Locator
-                .CurrentMutable
-                .RegisterView<BottomNavigation, BottomNavigationViewModel>()
-                .RegisterView<TabView, TabViewModel>()
-                .RegisterView<Agenda, AgendaViewModel>()
-                .RegisterView<Schedule, ScheduleViewModel>()
-                .RegisterView<SpeakerProfile, SpeakerProfileViewModel>()
-                .RegisterView<SponsorProfile, SponsorProfileViewModel>()
-                .RegisterView<SponsorList, SponsorListViewModel>();
 
             Locator
                 .Current
@@ -62,6 +41,33 @@ namespace ConferenceApp
         protected override void OnResume()
         {
             // Handle when your app resumes
+        }
+
+        protected override void ComposeApplicationRoot()
+        {
+            base.ComposeApplicationRoot();
+
+            RxApp.DefaultExceptionHandler = new ConferenceExceptionHandler();
+
+            Sextant.Sextant.Instance.InitializeForms();
+
+            Locator
+                .CurrentMutable
+                .UseSerilogFullLogger(
+                    new LoggerConfiguration()
+                        .WriteTo
+                        .AppCenterCrashes()
+                        .CreateLogger());
+
+            Locator
+                .CurrentMutable
+                .RegisterView<BottomNavigation, BottomNavigationViewModel>()
+                .RegisterView<TabView, TabViewModel>()
+                .RegisterView<Agenda, AgendaViewModel>()
+                .RegisterView<Schedule, ScheduleViewModel>()
+                .RegisterView<SpeakerProfile, SpeakerProfileViewModel>()
+                .RegisterView<SponsorProfile, SponsorProfileViewModel>()
+                .RegisterView<SponsorList, SponsorListViewModel>();
         }
     }
 }

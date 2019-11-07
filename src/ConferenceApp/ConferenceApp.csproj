@@ -58,18 +58,22 @@
       <SubType>Designer</SubType>
       <Generator></Generator>
     </Page>
-    <Page Include="Speaker\SpeakerProfile.xaml">
+    <Page Include="Speakers\SpeakerProfile.xaml">
       <SubType>Designer</SubType>
       <Generator></Generator>
     </Page>
-    <Page Include="Sponsor\SponsorList.xaml">
+    <Page Include="Sponsors\SponsorList.xaml">
       <SubType>Designer</SubType>
       <Generator></Generator>
     </Page>
-    <Page Include="Sponsor\SponsorProfile.xaml">
+    <Page Include="Sponsors\SponsorProfile.xaml">
       <SubType>Designer</SubType>
       <Generator></Generator>
     </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Services\Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>ConferenceApp.Services</AssemblyName>
+    <RootNamespace>ConferenceApp.Services</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DynamicData" />
+    <PackageReference Include="Refit" />
+    <PackageReference Include="Rocket.Surgery.Task.Extensions" />
+    <PackageReference Include="Splat" />
+    <PackageReference Include="Splat.Serilog" />
+    <PackageReference Include="Serilog" />
+    <PackageReference Include="Serilog.Sinks.Console" />
+    <PackageReference Include="Serilog.Sinks.AppCenter.Crash" />
+  </ItemGroup>
+
+</Project>

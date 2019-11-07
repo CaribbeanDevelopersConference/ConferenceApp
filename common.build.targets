@@ -4,6 +4,7 @@
         <PackageReference Update="ReactiveUI" Version="9.*" />
         <PackageReference Update="ReactiveUI.XamForms" Version="9.*" />
         <PackageReference Update="ReactiveUI.Events.XamForms" Version="9.*" />
+        <PackageReference Update="Refit" Version="4.7.51" />
         <PackageReference Update="Rocket.Surgery.ReactiveUI.Forms" Version="0.2.*" />
         <PackageReference Update="Rocket.Surgery.ReactiveUI.ViewModels" Version="0.2.*" />
         <PackageReference Update="Rocket.Surgery.Task.Extensions" Version="1.0.5" />
@@ -15,7 +16,6 @@
         <PackageReference Update="Serilog" Version="2.8.0" />
         <PackageReference Update="Serilog.Sinks.Console" Version="3.1.1" />
         <PackageReference Update="Serilog.Sinks.AppCenter.Crash" Version="1.*" />
-        <!-- <PackageReference Update="Serilog.Sinks.Xamarin" Version="0.1.*" /> -->
         <PackageReference Update="Xamarin.Forms" Version="4.1.0.709244" />  
         <PackageReference Update="Xamarin.Essentials" Version="1.1.0" />
     </ItemGroup>

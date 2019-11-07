@@ -24,6 +24,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".solution", ".solution", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConferenceApp", "src\ConferenceApp\ConferenceApp.csproj", "{958E5563-D88E-444F-914A-39AD4856D881}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "src\Services\Services.csproj", "{F7AFE4F9-1B15-4FEB-8F6F-5450F8A1ECEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,6 +84,18 @@ Global
 		{958E5563-D88E-444F-914A-39AD4856D881}.Release|iPhone.Build.0 = Release|Any CPU
 		{958E5563-D88E-444F-914A-39AD4856D881}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{958E5563-D88E-444F-914A-39AD4856D881}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{F7AFE4F9-1B15-4FEB-8F6F-5450F8A1ECEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7AFE4F9-1B15-4FEB-8F6F-5450F8A1ECEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7AFE4F9-1B15-4FEB-8F6F-5450F8A1ECEC}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{F7AFE4F9-1B15-4FEB-8F6F-5450F8A1ECEC}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{F7AFE4F9-1B15-4FEB-8F6F-5450F8A1ECEC}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{F7AFE4F9-1B15-4FEB-8F6F-5450F8A1ECEC}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{F7AFE4F9-1B15-4FEB-8F6F-5450F8A1ECEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7AFE4F9-1B15-4FEB-8F6F-5450F8A1ECEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7AFE4F9-1B15-4FEB-8F6F-5450F8A1ECEC}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{F7AFE4F9-1B15-4FEB-8F6F-5450F8A1ECEC}.Release|iPhone.Build.0 = Release|Any CPU
+		{F7AFE4F9-1B15-4FEB-8F6F-5450F8A1ECEC}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{F7AFE4F9-1B15-4FEB-8F6F-5450F8A1ECEC}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

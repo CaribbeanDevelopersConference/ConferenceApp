@@ -44,11 +44,6 @@ namespace ConferenceApp
             set => this.RaiseAndSetIfChanged(ref _initializeData, value);
         }
 
-        protected override void Initialize()
-        {
-            base.Initialize();
-        }
-
         protected override void ComposeObservables()
         {
             InitializeData = ReactiveCommand.CreateFromTask(ExecuteInitializeData);
