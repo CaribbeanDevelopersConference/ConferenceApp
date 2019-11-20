@@ -2,12 +2,15 @@
 <rxui:ReactiveTabbedPage
     x:TypeArguments="conference:BottomNavigationViewModel"
     xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:conference="clr-namespace:ConferenceApp;assembly=ConferenceApp"
-             xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
-             mc:Ignorable="d"
-             x:Class="ConferenceApp.BottomNavigation">
-
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:conference="clr-namespace:ConferenceApp;assembly=ConferenceApp"
+    xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    mc:Ignorable="d"
+    x:Class="ConferenceApp.BottomNavigation"
+    BarTextColor="{StaticResource CaribbeanRed}"
+    android:TabbedPage.BarItemColor="{StaticResource CaribbeanRed}"
+    android:TabbedPage.BarSelectedItemColor="Blue">
 </rxui:ReactiveTabbedPage>

@@ -21,20 +21,11 @@ namespace ConferenceApp
         public NavigationViewModelBase ViewModel { get; private set; }
 
         public TabViewModel(string tabTitle, string tabIcon, IParameterViewStackService stackService, Func<NavigationViewModelBase> pageCreate)
-            : base()
         {
             _pageCreate = pageCreate;
             TabIcon = tabIcon;
             TabTitle = tabTitle;
             ViewModel = _pageCreate();
-        }
-
-        protected override void ComposeObservables()
-        {
-        }
-
-        protected override void RegisterObservers()
-        {
         }
     }
 }

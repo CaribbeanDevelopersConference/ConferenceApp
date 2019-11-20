@@ -1,25 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reactive;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using System.Text;
 using ReactiveUI;
+using ReactiveUI.XamForms;
 using Rocket.Surgery.ReactiveUI;
 using Rocket.Surgery.ReactiveUI.Forms;
 using Splat;
 
 namespace ConferenceApp
 {
-    public abstract class DataPageBase<T> : ContentPageBase<T>, IEnableLogger
+    public abstract class DataPageBase<T> : ReactiveContentPage<T>, IEnableLogger
         where T : NavigationViewModelBase
     {
-        protected override void RegisterObservers()
-        {
-            base.RegisterObservers();
+        protected  CompositeDisposable ViewBindings = new CompositeDisposable();
 
+        protected DataPageBase()
+        {
             this.WhenAnyValue(x => x.ViewModel.InitializeData)
-                .SelectMany(cmd => cmd.Execute())
-                .Subscribe()
+                .Select(x => Unit.Default)
+                .InvokeCommand(this, x => x.ViewModel.InitializeData)
                 .DisposeWith(ViewBindings);
         }
     }

@@ -13,13 +13,5 @@ namespace ConferenceApp
         {
             _viewStackService = viewStackService;
         }
-
-        protected override void ComposeObservables()
-        {
-        }
-
-        protected override void RegisterObservers()
-        {
-        }
     }
 }

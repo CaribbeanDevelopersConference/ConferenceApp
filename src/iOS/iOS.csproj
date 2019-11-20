@@ -109,6 +109,9 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <BundleResource Include="Resources\rightArrow.png" />
+    <BundleResource Include="Resources\rightArrow@2x.png" />
+    <BundleResource Include="Resources\rightArrow@3x.png" />
     <BundleResource Include="Resources\tab_about.png" />
     <BundleResource Include="Resources\tab_about%402x.png" />
     <BundleResource Include="Resources\tab_about%403x.png" />
@@ -129,8 +132,12 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Xamarin.FFImageLoading" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" />
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations" />
     <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ConferenceApp\ConferenceApp.csproj">

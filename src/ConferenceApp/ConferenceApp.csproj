@@ -10,14 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" />  
-    <PackageReference Include="Xamarin.Essentials" />
     <PackageReference Include="DynamicData" />
     <PackageReference Include="ReactiveUI" />
     <PackageReference Include="ReactiveUI.XamForms" />
     <PackageReference Include="ReactiveUI.Events.XamForms" />
-    <PackageReference Include="Rocket.Surgery.Task.Extensions" />
     <PackageReference Include="Rocket.Surgery.ReactiveUI.Forms" />
+    <PackageReference Include="Rocket.Surgery.Task.Extensions" />
     <PackageReference Include="Rocket.Surgery.ReactiveUI.ViewModels" />
     <PackageReference Include="Rocket.Surgery.Xamarin.Essentials" />
     <PackageReference Include="Rocket.Surgery.Xamarin.Essentials.Abstractions" />
@@ -27,6 +25,12 @@
     <PackageReference Include="Serilog" />
     <PackageReference Include="Serilog.Sinks.Console" />
     <PackageReference Include="Serilog.Sinks.AppCenter.Crash" />
+    <PackageReference Include="Xamarin.FFImageLoading" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" />
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations" />
+    <PackageReference Include="Xamarin.Forms" />  
+    <PackageReference Include="Xamarin.Essentials" />
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" />
   </ItemGroup>
 
   <ItemGroup>
@@ -80,7 +84,19 @@
     <EmbeddedResource Update="Navigation\BottomNavigation.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Speakers\SpeakerProfile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Speakers\SpeakerViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Speaker\SpeakerProfile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Sponsors\SponsorList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Sponsors\SponsorProfile.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Sponsor\SponsorList.xaml">

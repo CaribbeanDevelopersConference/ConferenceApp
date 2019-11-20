@@ -21,39 +21,5 @@ namespace ConferenceApp
         {
             InitializeComponent();
         }
-
-        protected override void BindControls()
-        {
-            base.BindControls();
-
-            //this.OneWayBind(ViewModel, x => x.Sponsors, x => x.SponsorsListView.ItemsSource)
-            //    .DisposeWith(ViewBindings);
-        }
-
-        protected override void RegisterObservers()
-        {
-            base.RegisterObservers();
-
-            this.WhenAnyValue(x => x.ViewModel.SponsorItemViewModels)
-                .WhereNotNull()
-                .ObserveOn(RxApp.MainThreadScheduler)
-                .Do(_ => this.Log().Info($"{nameof(SponsorItemViewModel)} list count: {_.Count}"))
-                .Subscribe(items =>
-                {
-                    if (SponsorsListView == null)
-                    {
-                        return;
-                    }
-
-                    //SponsorsListView.ItemTemplate = new DataTemplate(typeof(SponsorViewCell));
-                    SponsorsListView.ItemsSource = items;
-                })
-                .DisposeWith(ViewBindings);
-
-            this.WhenAnyValue(x => x.ViewModel.InitializeData)
-                .Select(x => Unit.Default)
-                .InvokeCommand(this, x => x.ViewModel.InitializeData)
-                .DisposeWith(ViewBindings);
-        }
     }
 }

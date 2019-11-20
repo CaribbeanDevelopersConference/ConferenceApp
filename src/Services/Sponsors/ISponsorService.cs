@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Refit;
 
 namespace ConferenceApp.Services
@@ -6,9 +7,9 @@ namespace ConferenceApp.Services
     public interface ISponsorService
     {
         [Get("/sponsors/{id}")]
-        SponsorDto Get(string id);
+        Task<SponsorDto> Get(string id);
 
         [Get("/sponsors")]
-        IEnumerable<SponsorDto> GetAll();
+        Task<IEnumerable<SponsorDto>> GetAll();
     }
 }

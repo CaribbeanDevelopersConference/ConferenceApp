@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<conference:DataPageBase 
+    x:TypeArguments="speakers:SpeakerListViewModel"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:conference="clr-namespace:ConferenceApp;assembly=ConferenceApp"
+    xmlns:speakers="clr-namespace:ConferenceApp.Speakers;assembly=ConferenceApp"
+    xmlns:forms="clr-namespace:Rocket.Surgery.ReactiveUI.Forms;assembly=Rocket.Surgery.ReactiveUI.Forms"
+    x:Class="ConferenceApp.Speakers.SpeakerList">
+    <ContentPage.Content>
+        <StackLayout>
+            <forms:ReactiveListView
+                x:Name="SpeakersListView"
+                HasUnevenRows="True"
+                RowHeight="80"
+                IsPullToRefreshEnabled="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <speakers:SpeakerViewCell />
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </forms:ReactiveListView>
+        </StackLayout>
+    </ContentPage.Content>
+</conference:DataPageBase>

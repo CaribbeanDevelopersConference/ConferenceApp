@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ConferenceApp.Services
 {
     public interface IAgendaService
     {
-        AgendaDto Get(string id);
+        Task<AgendaDto> Get(string id);
 
-        IEnumerable<AgendaDto> GetAll();
+        Task<IEnumerable<AgendaDto>> GetAll();
     }
 }

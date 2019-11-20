@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace ConferenceApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SponsorProfile : ContentPageBase<SponsorProfileViewModel>
+    public partial class SponsorProfile : DataPageBase<SponsorProfileViewModel>
     {
         public SponsorProfile()
         {

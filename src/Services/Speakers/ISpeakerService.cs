@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ConferenceApp.Services
 {
     public interface ISpeakerService
     {
-        SpeakerDto Get(string id);
+        Task<SpeakerDto> Get(string id);
 
-        IEnumerable<SpeakerDto> GetAll();
+        Task<IEnumerable<SpeakerDto>> GetAll();
     }
 }

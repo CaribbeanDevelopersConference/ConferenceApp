@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace ConferenceApp.Services
 {
@@ -8,8 +9,8 @@ namespace ConferenceApp.Services
     {
         protected List<T> Items = new List<T>();
 
-        public T Get(string id) => Items.FirstOrDefault(x => x.Id == id);
+        public async Task<T> Get(string id) => Items.FirstOrDefault(x => x.Id == id);
 
-        public IEnumerable<T> GetAll() => Items;
+        public async Task<IEnumerable<T>> GetAll() => Items;
     }
 }

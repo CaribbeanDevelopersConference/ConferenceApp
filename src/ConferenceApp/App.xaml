@@ -11,9 +11,21 @@
         <ResourceDictionary>
             <!--Global Styles-->
             <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Color x:Key="CaribbeanRed">#dd1783</Color>
+            <Color x:Key="Gray">#555555</Color>
+            <Color x:Key="LightGray">#bebebe</Color>
+            <Thickness x:Key="ViewCellPadding" Bottom="11" Top="11" Left="11" Right="11" />
+            <Style x:Key="LargeLabelFontSize" TargetType="Label">
+                <Setter Property="FontSize" Value="20" />
+            </Style>
+            <Style x:Key="MediumLabelFontSize" TargetType="Label">
+                <Setter Property="FontSize" Value="20" />
+            </Style>
+            <Style x:Key="SmallLabelFontSize" TargetType="Label">
+                <Setter Property="FontSize" Value="20" />
+            </Style>
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="BarTextColor" Value="White" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>

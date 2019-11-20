@@ -18,6 +18,10 @@ namespace ConferenceApp.Services
         [JsonProperty("fullName")]
         public string FullName { get; set; }
 
+        public string Company { get; set; }
+
+        public string Title { get; set; }
+
         [JsonProperty("bio")]
         public string Bio { get; set; }
 

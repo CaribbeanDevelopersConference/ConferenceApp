@@ -1,4 +1,5 @@
 using System;
+using ConferenceApp.Speakers;
 using ReactiveUI;
 using Rocket.Surgery.ReactiveUI.Forms;
 using Serilog;
@@ -66,6 +67,7 @@ namespace ConferenceApp
                 .RegisterView<Agenda, AgendaViewModel>()
                 .RegisterView<Schedule, ScheduleViewModel>()
                 .RegisterView<SpeakerProfile, SpeakerProfileViewModel>()
+                .RegisterView<SpeakerList, SpeakerListViewModel>()
                 .RegisterView<SponsorProfile, SponsorProfileViewModel>()
                 .RegisterView<SponsorList, SponsorListViewModel>();
         }

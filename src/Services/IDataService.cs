@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ConferenceApp.Services
 {
-    public interface IDataService<out T>
+    public interface IDataService<T>
         where T : DtoBase
     {
-        T Get(string id);
+        Task<T> Get(string id);
 
-        IEnumerable<T> GetAll();
+        Task<IEnumerable<T>> GetAll();
     }
 }

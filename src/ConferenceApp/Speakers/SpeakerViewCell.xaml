@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<reactiveui:ReactiveContentView x:TypeArguments="conferenceApp:SpeakerItemViewModel" xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:conferenceApp="clr-namespace:ConferenceApp;assembly=ConferenceApp"
+             xmlns:reactiveui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:transformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             mc:Ignorable="d"
+             x:Class="ConferenceApp.Speakers.SpeakerViewCell">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="Margin" Value="20,0,25,0" />
+            </Style>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <Grid
+            Padding="{StaticResource ViewCellPadding}"
+            RowSpacing="2">
+            <Grid.RowDefinitions>
+                <RowDefinitionCollection>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </RowDefinitionCollection>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinitionCollection>
+                    <ColumnDefinition Width="90" />
+                    <ColumnDefinition Width="245" />
+                    <ColumnDefinition Width="*" />
+                </ColumnDefinitionCollection>
+            </Grid.ColumnDefinitions>
+            <ffimageloading:CachedImage
+                x:Name="SpeakerImage"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                WidthRequest="70"
+                HeightRequest="70"
+                DownsampleToViewSize="true"
+                Grid.Row="0"
+                Grid.Column="0" 
+                Grid.RowSpan="3">
+                <ffimageloading:CachedImage.Transformations>
+                    <transformations:CircleTransformation BorderHexColor="{StaticResource Gray}" />
+                </ffimageloading:CachedImage.Transformations>
+            </ffimageloading:CachedImage>
+            <Label x:Name="Name" Grid.Row="0" Grid.Column="1" FontSize="20" FontAttributes="Bold" />
+            <Label x:Name="Title" Grid.Row="1" Grid.Column="1" FontSize="14" TextColor="{StaticResource Gray}" />
+            <Label x:Name="Company" Grid.Row="2" Grid.Column="1" FontSize="12" TextColor="{StaticResource LightGray}" />
+            <Image Grid.Row="1" Grid.Column="2" Source="rightArrow" WidthRequest="9" HeightRequest="18" />
+        </Grid>
+    </ContentView.Content>
+</reactiveui:ReactiveContentView>

@@ -4,12 +4,5 @@ namespace ConferenceApp
 {
     public class SponsorProfileViewModel : NavigationViewModelBase
     {
-        protected override void ComposeObservables()
-        {
-        }
-
-        protected override void RegisterObservers()
-        {
-        }
     }
 }
