@@ -109,6 +109,9 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <BundleResource Include="Resources\path4.png" />
+    <BundleResource Include="Resources\path4@2x.png" />
+    <BundleResource Include="Resources\path4@3x.png" />
     <BundleResource Include="Resources\rightArrow.png" />
     <BundleResource Include="Resources\rightArrow@2x.png" />
     <BundleResource Include="Resources\rightArrow@3x.png" />

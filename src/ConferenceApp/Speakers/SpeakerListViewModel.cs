@@ -31,8 +31,8 @@ namespace ConferenceApp.Speakers
             Refresh = ReactiveCommand.CreateFromTask(ExecuteRefresh);
             ItemTapped = ReactiveCommand.Create<SpeakerItemViewModel, Unit>(item =>
             {
-                var profile = new SpeakerProfileViewModel(_viewStackService, new SpeakerServiceMock());
-                _viewStackService.PushPage(profile, new NavigationParameter { { "Id", item.SpeakerId } }).Subscribe();
+                var profile = new SpeakerDetailViewModel(_viewStackService, new SpeakerServiceMock());
+                _viewStackService.PushPage(profile, new NavigationParameter { { "Id", item.SpeakerId.ToString() } }).Subscribe();
                 return Unit.Default;
             });
             
@@ -70,8 +70,8 @@ namespace ConferenceApp.Speakers
             
             Speakers = new ObservableCollection<SpeakerItemViewModel>(speakers.Select(x => new SpeakerItemViewModel
             {
-                Name =  x.FullName,
                 SpeakerId = x.Id,
+                Name =  x.FullName,
                 Title =  x.Title,
                 Company = x.Company,
                 ImageSource = ImageSource.FromUri(x.ProfilePicture)

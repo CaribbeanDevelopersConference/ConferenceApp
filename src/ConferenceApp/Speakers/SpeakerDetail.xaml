@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<rsg:ContentPageBase 
+        x:TypeArguments="conferenceApp:SpeakerDetailViewModel"
+        xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:rsg="clr-namespace:Rocket.Surgery.ReactiveUI.Forms;assembly=Rocket.Surgery.ReactiveUI.Forms"
+        xmlns:conferenceApp="clr-namespace:ConferenceApp;assembly=ConferenceApp"
+        xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+        x:Class="ConferenceApp.SpeakerDetail">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="NameLabel" TargetType="Label">
+                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="FontSize" Value="45" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="16, 4" Spacing="0">
+            <ffimageloading:CachedImage
+                x:Name="SpeakerImage"
+                Margin="0,0,0,20"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="Center"
+                HeightRequest="343">
+            </ffimageloading:CachedImage>
+            <Label Text="{Binding Speaker.FirstName}" Style="{StaticResource NameLabel}" />
+            <Label Text="{Binding Speaker.LastName}" Style="{StaticResource NameLabel}" Margin="0,0,0,12" />
+            <ffimageloading:CachedImage Source="path4" HeightRequest="10" HorizontalOptions="Start" Margin="0,0,0,22" />
+            <Label Text="{Binding Speaker.Bio}" HeightRequest="96" WidthRequest="340" FontSize="14" />
+        </StackLayout>
+    </ContentPage.Content>
+</rsg:ContentPageBase>

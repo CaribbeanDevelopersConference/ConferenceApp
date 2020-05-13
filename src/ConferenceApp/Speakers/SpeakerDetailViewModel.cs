@@ -1,42 +1,37 @@
 using System;
-using System.Collections.ObjectModel;
-using System.Linq;
 using System.Reactive;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
 using ConferenceApp.Services;
 using ReactiveUI;
-using Rocket.Surgery.ReactiveUI;
 using Sextant;
 using Xamarin.Forms;
 
 namespace ConferenceApp
 {
-    public class SpeakerProfileViewModel : NavigationViewModelBase
+    public class SpeakerDetailViewModel : NavigationViewModelBase
     {
         private IParameterViewStackService _viewStackService;
         private readonly ISpeakerService _speakerService;
         private Guid _speakerId;
         private SpeakerDto _speaker;
+        private ImageSource _imageSource;
+        private string _name;
+        private string _biography;
 
-        public SpeakerProfileViewModel(IParameterViewStackService viewStackService, ISpeakerService speakerService)
+        public SpeakerDetailViewModel(IParameterViewStackService viewStackService, ISpeakerService speakerService)
         {
             _viewStackService = viewStackService;
             _speakerService = speakerService;
 
-            this.WhenAnyValue(x => x.SpeakerId)
-                .Subscribe(id =>
-                {
-                    Observable
-                        .Return(Unit.Default)
-                        .SelectMany(async x =>
-                        {
-                            Speaker = await _speakerService.Get(SpeakerId.ToString());
-                            return Unit.Default;
-                        })
-                        .Subscribe();
-                });
+            this.WhenAnyValue(x => x.Speaker)
+                .WhereNotNull()
+                .Subscribe(x => ImageSource = ImageSource.FromUri(x.ProfilePicture));
+
+            GetSpeaker = ReactiveCommand.CreateFromTask<Guid>(ExecuteGetSpeaker);
         }
+
+        public ReactiveCommand<Guid, Unit> GetSpeaker { get; set; }
 
         public SpeakerDto Speaker
         {
@@ -50,6 +45,12 @@ namespace ConferenceApp
             set => this.RaiseAndSetIfChanged(ref _speakerId, value);
         }
 
+        public ImageSource ImageSource
+        {
+            get => _imageSource;
+            set => this.RaiseAndSetIfChanged(ref _imageSource, value);
+        }
+
         public override IObservable<Unit> WhenNavigatingTo(INavigationParameter parameter)
         {
             if (parameter.ContainsKey("Id"))
@@ -58,6 +59,11 @@ namespace ConferenceApp
             }
 
             return base.WhenNavigatingTo(parameter);
+        }
+    
+        private async Task ExecuteGetSpeaker(Guid speakerId)
+        {
+            Speaker = await _speakerService.Get(speakerId.ToString());
         }
     }
 }

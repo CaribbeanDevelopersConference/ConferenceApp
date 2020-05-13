@@ -9,8 +9,8 @@ namespace ConferenceApp.Services
     {
         protected List<T> Items = new List<T>();
 
-        public async Task<T> Get(string id) => Items.FirstOrDefault(x => x.Id == id);
+        public virtual async Task<T> Get(string id) => Items.FirstOrDefault(x => x.Id == id);
 
-        public async Task<IEnumerable<T>> GetAll() => Items;
+        public virtual async Task<IEnumerable<T>> GetAll() => Items;
     }
 }

@@ -66,8 +66,8 @@ namespace ConferenceApp
                 .RegisterView<TabView, TabViewModel>()
                 .RegisterView<Agenda, AgendaViewModel>()
                 .RegisterView<Schedule, ScheduleViewModel>()
-                .RegisterView<SpeakerProfile, SpeakerProfileViewModel>()
                 .RegisterView<SpeakerList, SpeakerListViewModel>()
+                .RegisterView<SpeakerDetail, SpeakerDetailViewModel>()
                 .RegisterView<SponsorProfile, SponsorProfileViewModel>()
                 .RegisterView<SponsorList, SponsorListViewModel>();
         }

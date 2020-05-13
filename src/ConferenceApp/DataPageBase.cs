@@ -15,7 +15,7 @@ namespace ConferenceApp
     public abstract class DataPageBase<T> : ReactiveContentPage<T>, IEnableLogger
         where T : NavigationViewModelBase
     {
-        protected  CompositeDisposable ViewBindings = new CompositeDisposable();
+        protected readonly CompositeDisposable ViewBindings = new CompositeDisposable();
 
         protected DataPageBase()
         {

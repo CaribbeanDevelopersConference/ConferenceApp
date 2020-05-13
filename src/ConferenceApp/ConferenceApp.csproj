@@ -62,10 +62,6 @@
       <SubType>Designer</SubType>
       <Generator></Generator>
     </Page>
-    <Page Include="Speakers\SpeakerProfile.xaml">
-      <SubType>Designer</SubType>
-      <Generator></Generator>
-    </Page>
     <Page Include="Sponsors\SponsorList.xaml">
       <SubType>Designer</SubType>
       <Generator></Generator>
